@@ -7,7 +7,7 @@ const { register_service, checkuserexist, getAllUser, getUserprofile } = require
 
 const registerUser = async (req, res) => {
     const { username, role } = req.body;
-    console.log("==================", req.body);
+    //console.log("==================", req.body);
     const hashedPassword = req.body.hashedPassword; // hashed password from middleware
     try {
         const userexist = await checkuserexist(username);
