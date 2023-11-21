@@ -7,6 +7,9 @@ const checkuserexist = async (username) => {
 
 const register_service = async (userdata) => {
     const user = new User(userdata)
+    if (userdata.hashPassword) {
+        user.password = userdata.hashPassword;
+    }
     await user.save();
 }
 
