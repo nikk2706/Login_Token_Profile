@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 
-const hashPasswordmiddleware = async(req, res, next)=>{
+const hashPasswordMiddleware = async(req, res, next)=>{
     const { password } = req.body;
 
     try{
@@ -11,4 +11,4 @@ const hashPasswordmiddleware = async(req, res, next)=>{
         res.status(500).send("Password hashing failed...");
     }
 }
-module.exports =  hashPasswordmiddleware  ;
+module.exports =  hashPasswordMiddleware  ;
